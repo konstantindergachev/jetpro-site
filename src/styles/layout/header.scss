@@ -1,0 +1,58 @@
+.header {
+  &__wrapper {
+    display: flex;
+    text-align: left;
+    padding: 1.375rem 0;
+    align-items: baseline; //для выравнивания надписей в header
+    @include resp(620) {
+      display: block;
+      text-align: center;
+    }
+  }
+  &__logo {
+    @include resp(620) {
+      margin-bottom: 1.25rem;
+    }
+  }
+  &__nav {
+    margin-left: auto;
+    position: relative; //сдвигаем под
+    top: -0.375rem; //макет вверх на 6px
+    @include resp(620) {
+      top: 0;
+      text-align: center;
+      line-height: 2; //из-за того, что когда резина зажимается появляются маленькие расстояния
+    }
+  }
+}
+
+.logo {
+  font-size: 0;
+  color: #e8603c;
+  text-decoration: none;
+  @extend %be;
+  &__part1,
+  &__part2 {
+    font-size: 2.25rem;
+    display: inline-block;
+  }
+  &__part2 {
+    color: #f3af9d;
+  }
+}
+
+.nav {
+  font-size: 1rem;
+  @extend %be;
+  &__link {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #b9b9b9;
+    margin-left: 1.5rem;
+    &.is-active,
+    &:hover {
+      //перекращиваем при наведении
+      color: #e8663c;
+    }
+  }
+}

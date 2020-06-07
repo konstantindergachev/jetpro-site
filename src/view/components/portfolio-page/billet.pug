@@ -1,0 +1,22 @@
+- 
+  const billets = [
+    {img: 'character.png', alt: 'character', title:'Character Design', date: 'June 15, 2012'},
+    {img: 'giraffes.png', alt: 'giraffes', title:'Brochure Design', date: 'June 15, 2012'},
+    {img: 'socials.png', alt: 'socials', title:'Social Media Buttons', date: 'June 15, 2012'},
+    {img: 'wordpress.png', alt: 'wordpress', title:'WordPress Theme', date: 'June 15, 2012'},
+    {img: 'tree-cloud.png', alt: 'poster', title:'poster', date: 'June 15, 2012'},
+    {img: 'plane.png', alt: 'plane', title:'Web Graphic Element', date: 'June 15, 2012'},
+    {img: 'gun.png', alt: 'gun', title:'Brochure Design', date: 'June 15, 2012'},
+    {img: 'bunny.png', alt: 'bunny', title:'Big Buck Bunney', date: 'June 15, 2012'},
+    {img: 'toys.png', alt: 'toys', title:'Cartoon Characters', date: 'June 15, 2012'},
+    {img: 'graffiti.png', alt: 'graffiti', title:'Sticker Design', date: 'June 15, 2012'},
+    {img: 'taeed.png', alt: 'taeed', title:'Business Cards', date: 'June 15, 2012'},
+    {img: 'google-tree.png', alt: 'google-tree', title:'Slider Plugin', date: 'June 15, 2012'}
+  ];
+ul.billet__list
+  each item in billets
+    li.billet__item
+      a.billet__link(href="#")
+        img.billet__img(src="/img/portfolio/"+item.img, alt=item.alt)
+        span.billet__title= item.title
+        span.billet__date= item.date

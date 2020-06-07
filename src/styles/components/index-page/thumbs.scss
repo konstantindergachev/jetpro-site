@@ -1,0 +1,28 @@
+.thumbs {
+  margin-top: 0.875rem;
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 1.0625rem;
+    @include resp(620) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include resp(420) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  &__item {
+    @include resp(620) {
+      justify-self: center;
+    }
+  }
+  &__link {
+    display: block;
+    width: 8.75rem;
+    height: 7.625rem;
+    text-decoration: none;
+    padding-bottom: 60%;
+    background-size: cover;
+    background-position: 50% 50%;
+  }
+}

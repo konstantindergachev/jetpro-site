@@ -1,0 +1,37 @@
+﻿@import "styles/abstracts/_variables";
+@import "styles/libraries/font-awesome/font-awesome";
+@import "styles/libraries/bebas";
+@import "styles/abstracts/_mixins";
+@import "styles/abstracts/_animation";
+
+@import "styles/layout/header";
+@import "styles/layout/footer";
+
+/*---------- 'Base' ----------*/
+@import "styles/base/base";
+
+/*---------- 'index' ----------*/
+@import "styles/components/index-page/hero";
+@import "styles/components/index-page/thumbs";
+@import "styles/components/index-page/features";
+@import "styles/components/index-page/block-works";
+
+/*---------- 'about' ----------*/
+@import "styles/components/about-page/article";
+
+/*---------- 'blog' ----------*/
+@import "styles/components/blog-page/second-slider";
+@import "styles/components/blog-page/blog-article";
+@import "styles/components/blog-page/quote";
+@import "styles/components/blog-page/pagination";
+
+/*---------- 'Portfolio' ----------*/
+@import "styles/components/portfolio-page/menu";
+@import "styles/components/portfolio-page/billet";
+
+/*---------- 'Contacts' ----------*/
+@import "styles/components/contacts-page/map";
+@import "styles/components/contacts-page/contacts-description";
+@import "styles/components/contacts-page/form";
+
+@import "styles/components/sidebar";

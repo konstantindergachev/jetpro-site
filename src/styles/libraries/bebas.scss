@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'bebas-webfont';
+  src: url('./fonts/bebas-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@mixin fira($style: regular) {
+  @if $style == regular {
+    font-family: 'bebas-webfont';
+  }
+}

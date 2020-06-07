@@ -1,0 +1,36 @@
+.blockquote__wrapper {
+  &:before {
+    right: 100%;
+    margin-right: 0.625rem;
+  }
+  &:before {
+    content: url('/img/blog/icon/ico-quotes-1.svg');
+    position: absolute;
+    padding: 1.1875rem 1.25rem;
+    line-height: 0.9;
+    top: 0;
+    height: 4.625rem;
+    background: #e8603c;
+  }
+}
+.quote__quotes {
+  font-size: 0.8125rem;
+  font-style: italic;
+  line-height: 1.42;
+  text-align: justify;
+  margin: 0 0.625rem 0 0;
+  padding: 1.9375rem 3.4375rem 1.9375rem 5rem;
+  background-color: #f3f3f3;
+  &:before {
+    right: 87%;
+    margin: -0.3125rem 0.625rem 0 0;
+  }
+  &:before {
+    content: url('/img/blog/icon/ico-quotes-2.svg');
+    position: absolute;
+    padding: 1.1875rem 1.25rem;
+    line-height: 0.9;
+    top: 0;
+    height: 4.625rem;
+  }
+}

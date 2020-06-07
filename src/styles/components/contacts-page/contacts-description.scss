@@ -1,0 +1,42 @@
+.contacts {
+  display: flex;
+  @include resp(620) {
+    flex-direction: column;
+  }
+  &__wrapper {
+    max-width: 43.75rem;
+    width: 100%;
+  }
+  &__description {
+    display: flex;
+    margin-bottom: 2.25rem;
+    &-list {
+      max-width: 13.125rem;
+    }
+  }
+  &__text,
+  &__address-text,
+  &__phones-link {
+    font-size: z12px;
+    color: #414141;
+  }
+  &__text {
+    margin-bottom: 0.9375rem;
+    text-align: justify;
+  }
+
+  &__address-title {
+    color: #e8663c;
+    font-weight: 700;
+    font-size: 0.75rem;
+    line-height: 1.42;
+    margin-bottom: 0.9375rem;
+  }
+  &__address-text {
+    font-weight: 400;
+  }
+
+  &__phones-link {
+    text-decoration: none;
+  }
+}

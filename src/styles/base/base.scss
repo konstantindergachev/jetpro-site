@@ -1,0 +1,103 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 1rem; //1rem = 10px, 10/16 = 62.5%
+}
+li {
+  list-style: none;
+}
+body {
+  font-family: Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+.container {
+  max-width: 58.75rem;
+  margin: 0 auto;
+  @include resp(960) {
+    margin: 0 0.625rem; // отступаем на 10px по краям
+  }
+}
+.h3 {
+  display: flex;
+  font-size: 0.875rem;
+  color: #e8603c;
+  text-decoration: none;
+  text-transform: uppercase;
+  @extend %be;
+  &:after {
+    content: '';
+    background-color: #ff0000;
+    flex: 1;
+    margin-left: 1.25rem;
+    background: url('/img/pattern.png') 0 0;
+  }
+}
+/*---------- 'Title' ----------*/
+.about {
+  width: 100%;
+  position: relative;
+  margin-bottom: 2.25rem;
+  &__wrapper {
+    position: relative;
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      height: 3.75rem;
+      background-color: #f2ae9c;
+      top: 0;
+      width: 100%;
+    }
+    &:before {
+      right: 100%;
+      margin-right: 0.625rem;
+    }
+    &:after {
+      left: 100%;
+      margin-left: 0.625rem;
+    }
+  }
+  &__title {
+    @extend %be;
+    max-width: 58.75rem;
+    height: 3.75rem;
+    background-color: #e8603c;
+    font-size: 1.5rem;
+    color: #ffffff;
+    padding: 0.625rem 0 0 1.25rem;
+    line-height: 1.5;
+  }
+}
+/*---------- 'Button' ----------*/
+.button {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  height: 1.9375rem;
+  padding: 0 0.8125rem;
+  display: inline-block;
+  color: #ffffff;
+  text-decoration: none;
+  background: #e8663c;
+  line-height: 1.9375rem;
+  @extend %be;
+}
+.active__bacground {
+  background-color: #e8663c;
+  color: #ffffff !important;
+}
+.active__title {
+  color: #e8663c;
+}
+/*---------- 'Strip' ----------*/
+.strip {
+  max-width: 43.75rem;
+  width: 100%;
+  height: 0.8125rem;
+  background: url('/img/pattern.png') 0 0;
+  margin-bottom: 3.75rem;
+}

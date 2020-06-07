@@ -1,0 +1,105 @@
+.hero {
+  width: 100%;
+  position: relative;
+  margin-bottom: 2.25rem;
+  &__wrapper {
+    position: relative;
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      height: 3.75rem;
+      background-color: #f2ae9c;
+      top: 0;
+      width: 100%;
+    }
+    &:before {
+      right: 100%;
+      margin-right: 0.625rem;
+    }
+    &:after {
+      left: 100%;
+      margin-left: 0.625rem;
+    }
+  }
+}
+.slider {
+  position: relative;
+  overflow: hidden;
+  &__prev,
+  &__next {
+    position: absolute;
+    top: 11.25rem;
+    left: 1.25rem;
+    width: 2.5rem;
+    height: 3.125rem;
+    z-index: 1000;
+    font-size: 3.375rem;
+    cursor: pointer;
+  }
+  &__next {
+    left: auto;
+    right: 1.25rem;
+    transform: rotateY(180deg);
+  }
+  &__slides {
+    display: flex;
+    transition: 0.6s;
+    transition-timing-function: ease-in-out;
+  }
+  &__one-nav {
+    display: inline-block;
+    width: 0.625rem;
+    height: 0.625rem;
+    margin: 0 0.3125rem;
+    border-radius: 50%;
+    border: 1px solid lightgray;
+    background: lightgray;
+    cursor: pointer;
+  }
+}
+
+.slide {
+  flex: 1 0 100%;
+  position: relative;
+  height: 24.6875rem;
+  padding-bottom: 42%; //чтобы пропорции жались при резине
+  &__content {
+    position: absolute;
+    background-color: rgba(#e8663c, .8);
+    left: 2.3125rem;
+    bottom: 1.9375rem;
+    max-width: 26rem;
+    padding: 1.0625rem;
+    color: #ffffff;
+    @include resp(620) {
+      background: none;
+      top: 0.625rem;
+      bottom: auto;
+    }
+  }
+  &__title {
+    @extend %be;
+    font-size: 1.125rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-bottom: 0.625rem;
+  }
+  &__text {
+    font-size: 0.75rem;
+    line-height: 1.42;
+  }
+}
+.btns__one {
+  text-align: center;
+  position: absolute;
+  bottom: 0.625rem;
+  left: 0.625rem;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.active {
+  border: tomato;
+  background: tomato;
+}

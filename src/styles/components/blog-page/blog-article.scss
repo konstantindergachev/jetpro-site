@@ -1,0 +1,118 @@
+.blog {
+  display: flex;
+  @include resp(620) {
+    flex-direction: column;
+  }
+  &__article {
+    display: flex;
+    margin-bottom: 3.125rem;
+    position: relative;
+    max-width: 43.75rem;
+    margin-right: 1.25rem;
+    &-list {
+      max-width: 6.25rem;
+      width: 100%;
+      margin-right: 3.125rem;
+    }
+    &-item {
+      color: #e8603c;
+      @extend %be;
+      font-size: 0.75rem;
+      margin-bottom: 1.25rem;
+    }
+    &-link {
+      display: block;
+      text-decoration: none;
+      color: #bababa;
+      font-family: Helvetica, sans-serif;
+      font-size: 0.75rem;
+      width: 100%;
+      margin-top: 0.75rem;
+    }
+    &-description {
+      max-width: 32.5rem;
+      width: 100%;
+    }
+    &-title {
+      position: relative;
+      color: #e8603c;
+      @extend %be;
+      font-size: 1.125rem;
+      margin-bottom: 1.5625rem;
+      width: 100%;
+      letter-spacing: 1px;
+    }
+    &-text {
+      font-size: 0.75rem;
+    }
+    &-text:not(:last-child) {
+      margin-bottom: 1.5625rem;
+    }
+  }
+  &__img {
+    max-width: 43.75rem;
+    width: 100%;
+    margin-bottom: 1.5625rem;
+    margin-right: 1.25rem;
+  }
+}
+.img__container-jesus,
+.img__container-bunny {
+  position: relative;
+}
+.img__container-jesus:before {
+  right: 100%;
+  margin-right: 0.625rem;
+}
+.img__container-jesus:before {
+  content: url('/img/blog/icon/ico-jesus.svg');
+  display: block;
+  position: absolute;
+  padding: 1.1875rem 1.25rem;
+  line-height: 0.9;
+  top: 0;
+  width: 4.625rem;
+  height: 4.625rem;
+  background: #e8603c;
+}
+.img__container-bunny:before {
+  right: 100%;
+  margin-right: 0.625rem;
+}
+.img__container-bunny:before {
+  content: url('/img/blog/icon/ico-video.svg');
+  display: block;
+  position: absolute;
+  padding: 1.1875rem 1.25rem;
+  line-height: 0.9;
+  top: 0;
+  width: 4.625rem;
+  height: 4.625rem;
+  background: #e8603c;
+}
+.domain {
+  flex-wrap: wrap;
+  &:before {
+    right: 100%;
+    margin-right: 0.625rem;
+  }
+  &:before {
+    content: url('/img/blog/icon/ico-chain.svg');
+    position: absolute;
+    padding: 1.1875rem 1.25rem;
+    line-height: 0.9;
+    top: 0;
+    height: 4.625rem;
+    background: #e8603c;
+  }
+}
+.domain__title {
+  margin-bottom: 0;
+}
+.domain__link {
+  position: absolute;
+  top: 1.25rem;
+}
+.domain__text {
+  margin-top: 2.3125rem;
+}

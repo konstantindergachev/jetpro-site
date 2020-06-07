@@ -1,0 +1,44 @@
+.features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1.0625rem;
+  margin-bottom: 2.75rem;
+  @include resp(840) {
+    display: block;
+  }
+}
+
+.feature {
+  @include resp(840) {
+    margin-bottom: 2.5rem;
+  }
+  &__title {
+    display: flex;
+    margin-bottom: 1.9375rem;
+    @extend %be;
+    text-transform: uppercase;
+    font-size: 1.125rem;
+    flex: 1;
+    color: #e8663c;
+    line-height: 1.33;
+    @include resp(840) {
+      display: block;
+      margin-bottom: 0.625rem;
+    }
+  }
+  &__icon {
+    flex: 0;
+    margin-right: 1.125rem;
+    font-size: 2.875rem;
+    @include resp(840) {
+      margin-bottom: 0.625rem;
+    }
+  }
+  &__text {
+    font-size: 0.75rem;
+    color: #414141;
+    line-height: 1.5;
+    padding-right: 1.25rem;
+    margin-bottom: 1.0625rem;
+  }
+}

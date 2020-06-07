@@ -1,0 +1,17 @@
+.menu__list {
+  margin-bottom: 2.25rem;
+}
+
+.menu__link {
+  font-size: 0.875rem;
+  padding: 0.5rem 0.625rem;
+  line-height: 1.42;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #b9b9b9;
+  @extend %be;
+  &.is-active,
+  &:hover {
+    color: #e8663c;
+  }
+}

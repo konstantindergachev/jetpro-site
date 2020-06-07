@@ -1,0 +1,22 @@
+.pagination {
+  &__list {
+    font-size: 0.875rem;
+  }
+  &__item {
+    width: 1.6875rem;
+    display: inline-block;
+    text-align: center;
+    padding: 0.3125rem 0.625rem;
+    margin-right: 0.3125rem;
+    cursor: pointer;
+  }
+  &__item:nth-child(2),
+  &__item:nth-child(3) {
+    background-color: #f3b29d;
+  }
+  &__link {
+    text-decoration: none;
+    color: #ffffff;
+    @extend %be;
+  }
+}
